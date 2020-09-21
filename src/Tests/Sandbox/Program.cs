@@ -5,14 +5,14 @@
     using System.IO;
     using System.Threading.Tasks;
 
-    using AspNetCoreTemplate.Data;
-    using AspNetCoreTemplate.Data.Common;
-    using AspNetCoreTemplate.Data.Common.Repositories;
-    using AspNetCoreTemplate.Data.Models;
-    using AspNetCoreTemplate.Data.Repositories;
-    using AspNetCoreTemplate.Data.Seeding;
-    using AspNetCoreTemplate.Services.Data;
-    using AspNetCoreTemplate.Services.Messaging;
+    using PcPartPicker2.Data;
+    using PcPartPicker2.Data.Common;
+    using PcPartPicker2.Data.Common.Repositories;
+    using PcPartPicker2.Data.Models;
+    using PcPartPicker2.Data.Repositories;
+    using PcPartPicker2.Data.Seeding;
+    using PcPartPicker2.Services.Data;
+    using PcPartPicker2.Services.Messaging;
 
     using CommandLine;
 
