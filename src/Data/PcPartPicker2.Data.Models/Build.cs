@@ -21,7 +21,7 @@
 
         public int DownVotes { get; set; }
 
-        //public string Author { get; set; }
+        public ApplicationUser Author { get; set; }
 
         //public ICollection<string> Parts { get; set; }
 
