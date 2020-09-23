@@ -28,6 +28,8 @@
 
         public DbSet<Build> Builds { get; set; }
 
+        public DbSet<Cpu> Cpus { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
