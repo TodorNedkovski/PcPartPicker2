@@ -6,11 +6,10 @@
     using System.Threading;
     using System.Threading.Tasks;
 
-    using PcPartPicker2.Data.Common.Models;
-    using PcPartPicker2.Data.Models;
-
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
+    using PcPartPicker2.Data.Common.Models;
+    using PcPartPicker2.Data.Models;
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>
     {
@@ -29,6 +28,8 @@
         public DbSet<Build> Builds { get; set; }
 
         public DbSet<Cpu> Cpus { get; set; }
+
+        public DbSet<CpuCooler> CpuCoolers { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);
 
