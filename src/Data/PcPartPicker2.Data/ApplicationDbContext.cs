@@ -33,6 +33,8 @@
 
         public DbSet<Motherboard> Motherboards { get; set; }
 
+        public DbSet<Memory> Memories { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
