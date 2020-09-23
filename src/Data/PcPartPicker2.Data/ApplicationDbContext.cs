@@ -35,6 +35,8 @@
 
         public DbSet<Memory> Memories { get; set; }
 
+        public DbSet<Storage> Storages { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
