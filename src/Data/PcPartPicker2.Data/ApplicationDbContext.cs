@@ -31,6 +31,8 @@
 
         public DbSet<CpuCooler> CpuCoolers { get; set; }
 
+        public DbSet<Motherboard> Motherboards { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
