@@ -1,8 +1,9 @@
 ﻿namespace PcPartPicker2.Data.Configurations
 {
-    using PcPartPicker2.Data.Models;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+    using PcPartPicker2.Data.Models;
 
     public class ApplicationUserConfiguration : IEntityTypeConfiguration<ApplicationUser>
     {
