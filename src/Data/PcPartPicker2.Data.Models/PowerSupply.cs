@@ -22,5 +22,7 @@
         public int Length { get; set; }
 
         public string Type { get; set; }
+
+        public virtual ICollection<Build> Builds { get; set; }
     }
 }

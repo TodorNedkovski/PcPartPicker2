@@ -25,5 +25,7 @@
         public bool WaterCooled { get; set; }
 
         public bool Fanless { get; set; }
+
+        public virtual ICollection<Build> Builds { get; set; }
     }
 }

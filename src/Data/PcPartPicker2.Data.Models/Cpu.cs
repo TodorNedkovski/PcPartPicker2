@@ -26,5 +26,7 @@
         public bool IntegratedGraphics { get; set; }
 
         public double MaximumSupportedMemory { get; set; }
+
+        public virtual ICollection<Build> Builds { get; set; }
     }
 }

@@ -4,11 +4,10 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    using PcPartPicker2.Common;
-    using PcPartPicker2.Data.Models;
-
     using Microsoft.AspNetCore.Identity;
     using Microsoft.Extensions.DependencyInjection;
+    using PcPartPicker2.Common;
+    using PcPartPicker2.Data.Models;
 
     internal class RolesSeeder : ISeeder
     {

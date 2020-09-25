@@ -26,5 +26,7 @@
         public string Interface { get; set; }
 
         public bool IsNVME { get; set; }
+
+        public virtual ICollection<Build> Builds { get; set; }
     }
 }

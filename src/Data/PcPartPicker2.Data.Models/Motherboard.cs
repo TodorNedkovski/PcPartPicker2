@@ -28,5 +28,7 @@
         public int MemorySlots { get; set; }
 
         public string WirelessNetworking { get; set; }
+
+        public virtual ICollection<Build> Builds { get; set; }
     }
 }

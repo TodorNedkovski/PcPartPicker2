@@ -22,5 +22,7 @@
         public double Voltage { get; set; }
 
         public bool HeatSpreader { get; set; }
+
+        public virtual ICollection<Build> Builds { get; set; }
     }
 }

@@ -34,5 +34,7 @@
         public int HDMIPorts { get; set; }
 
         public int CoolingFansCount { get; set; }
+
+        public virtual ICollection<Build> Builds { get; set; }
     }
 }

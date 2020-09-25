@@ -21,10 +21,40 @@
 
         public int DownVotes { get; set; }
 
+        public string AuthorId { get; set; }
+
         public ApplicationUser Author { get; set; }
 
-        //public ICollection<string> Parts { get; set; }
+        public string CaseId { get; set; }
 
-        //public ICollection<string> Comments { get; set; }
+        public Case Case { get; set; }
+
+        public string CpuId { get; set; }
+
+        public Cpu Cpu { get; set; }
+
+        public string CpuCoolerId { get; set; }
+
+        public CpuCooler CpuCooler { get; set; }
+
+        public string MemoryId { get; set; }
+
+        public Memory Memory { get; set; }
+
+        public string MotherboardId { get; set; }
+
+        public Motherboard Motherboard { get; set; }
+
+        public string PowerSupplyId { get; set; }
+
+        public PowerSupply PowerSupply { get; set; }
+
+        public string StorageId { get; set; }
+
+        public Storage Storage { get; set; }
+
+        public string VideoCardId { get; set; }
+
+        public VideoCard VideoCard { get; set; }
     }
 }

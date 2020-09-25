@@ -30,5 +30,7 @@
         public double Length { get; set; }
 
         public double VolumeInLiters { get; set; }
+
+        public virtual ICollection<Build> Builds { get; set; }
     }
 }
