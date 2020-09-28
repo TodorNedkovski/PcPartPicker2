@@ -4,22 +4,20 @@
     using System.Collections.Generic;
     using System.Text;
     using System.Threading.Tasks;
-
+    using Microsoft.EntityFrameworkCore;
     using PcPartPicker2.Data.Models;
 
     public class BuildSeeder : ISeeder
     {
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         {
+            var author = await dbContext.Users.FirstOrDefaultAsync();
+
             var builds = new List<Build>
             {
                 new Build()
                 {
-                    Author = new ApplicationUser()
-                    {
-                        NormalizedUserName = "JOZUEF",
-                        NormalizedEmail = "TNEDKOVSKI@GMAIL.COM",
-                    },
+                    Author = author,
                     Case = new Case()
                     {
                         Manufacturer = "Case Inc",

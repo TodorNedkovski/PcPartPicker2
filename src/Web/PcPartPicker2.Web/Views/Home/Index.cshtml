@@ -1,9 +1,30 @@
 ﻿@using PcPartPicker2.Common
+@using PcPartPicker2.Web.ViewModels.Builds
+@model ICollection<BuildViewModel>
 @{
     this.ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to @GlobalConstants.SystemName!</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<head>
+
+</head>
+<body>
+    @foreach (var build in this.Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@build.Name</h5>
+                <p class="card-text">@build.Description</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Amd</li>
+                <li class="list-group-item">Nvidia</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    }
+</body>

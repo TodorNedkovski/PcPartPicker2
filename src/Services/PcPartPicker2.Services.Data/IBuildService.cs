@@ -2,12 +2,13 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Collections.ObjectModel;
     using System.Text;
     using System.Threading.Tasks;
 
     public interface IBuildService
     {
-        Task GetAllAsync<T>(int take);
+        ICollection<T> GetAllAsync<T>(int take);
 
         Task AddAsync<T>(T build);
 

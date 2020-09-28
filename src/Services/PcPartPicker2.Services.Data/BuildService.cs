@@ -2,11 +2,14 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
 
     using PcPartPicker2.Data.Common.Repositories;
     using PcPartPicker2.Data.Models;
+    using PcPartPicker2.Services.Mapping;
 
     public class BuildService : IBuildService
     {
@@ -29,9 +32,13 @@
             throw new NotImplementedException();
         }
 
-        public async Task GetAllAsync<T>(int take)
+        public ICollection<T> GetAllAsync<T>(int take)
         {
-            throw new NotImplementedException();
+            return this.repository
+                .AllAsNoTracking()
+                .To<T>()
+                .Take(take)
+                .ToList();
         }
     }
 }
