@@ -1,31 +1,41 @@
 ﻿namespace PcPartPicker2.Web.Controllers
 {
+    using System.Collections;
+    using System.Collections.Generic;
     using System.Diagnostics;
-
-    using PcPartPicker2.Web.ViewModels;
+    using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Mvc;
-    using PcPartPicker2.Services.Data;
     using Microsoft.AspNetCore.Server.IIS.Core;
-    using System.Collections;
+    using PcPartPicker2.Services.Data;
+    using PcPartPicker2.Web.ViewModels;
+    using PcPartPicker2.Web.ViewModels.Blogs;
     using PcPartPicker2.Web.ViewModels.Builds;
-    using System.Collections.Generic;
-    using System.Threading.Tasks;
+    using PcPartPicker2.Web.ViewModels.Index;
 
     public class HomeController : BaseController
     {
         private readonly IBuildService buildService;
+        private readonly IBlogService blogService;
 
-        public HomeController(IBuildService buildService)
+        public HomeController(IBuildService buildService, IBlogService blogService)
         {
             this.buildService = buildService;
+            this.blogService = blogService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             var builds = this.buildService.GetAllAsync<BuildViewModel>(10);
+            var blogs = await this.blogService.GetAllAsync<BlogViewModel>(3);
 
-            return this.View(builds);
+            var indexViewModel = new IndexVIewModel()
+            {
+                Blogs = blogs,
+                Builds = builds,
+            };
+
+            return this.View(indexViewModel);
         }
 
         public IActionResult Privacy()

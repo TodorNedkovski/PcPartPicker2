@@ -28,6 +28,7 @@
                               new RolesSeeder(),
                               new SettingsSeeder(),
                               new BuildSeeder(),
+                              new BlogSeeder(),
                           };
 
             foreach (var seeder in seeders)
