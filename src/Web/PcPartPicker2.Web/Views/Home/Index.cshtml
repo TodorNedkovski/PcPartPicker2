@@ -9,6 +9,8 @@
 
 </head>
 <body>
+    <h5>Completed Builds</h5>
+    <hr />
     <div class="row">
         @foreach (var build in this.Model.Builds)
         {
@@ -28,8 +30,10 @@
                 </div>
             </div>
         }
+
     </div>
-    <h3>Blog</h3>
+    <a class="btn btn-primary">See All Completed Builds</a>
+    <h5>Blog</h5>
     <hr />
     <div class="row">
         @foreach (var blog in this.Model.Blogs)
@@ -43,4 +47,5 @@
             </div>
         }
     </div>
+    <a class="btn btn-primary">See More Blog Posts</a>
 </body>
